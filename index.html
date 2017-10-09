@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document 1.1</title>
+   <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <!-- ui-router.github.io -->
+    <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    
+    <script src="app.module.js"></script>
+    <script src="app.router.conf.js"></script>
+    
+    <!-- Dashboard -->
+    <script src="modules/dashboard/dashboard.module.js"></script>
+    <script src="modules/dashboard/dashboard.controller.js"></script>
+    <!-- Dashboard -->
+    
+    <!-- Kupci -->
+    <script src="modules/kupci/kupci.module.js"></script>
+    <script src="modules/kupci/kupci.controller.js"></script>
+    <!-- Kupci -->
+    
+    <!-- reusable -->
+    <script src="components/list.Items.component/list.items.component.js"></script>
+    <!-- reusable -->
+    <style>
+        html, body, input, select, textarea{
+            font-size: 1.05em
+        }
+		.btn{
+			margin:5px 5px 0px 5px;
+		}
+    </style> 
+</head>
+<body>
+   <nav class="navbar navbar-default">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <a class="navbar-brand" href="#">
+			Angular.Js
+		  </a>
+		</div>
+          <ul class="nav navbar-nav navbar-right">
+           <li><a href="javascript:void(0)" ui-sref="dashboard">Dashboard</a></li>
+           <li><a href="javascript:void(0)" ui-sref="kupci">Kupci</a></li>
+          </ul>
+	  </div>
+	</nav>
+    <div class="container" >
+        <div ui-view></div>
+    </div> 
+</body>
+</html>
